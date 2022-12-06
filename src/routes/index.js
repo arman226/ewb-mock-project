@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router";
 import NavMenu from "components/navMenu";
 import { BrowserRouter as Router, Navigate } from "react-router-dom";
 const Home = lazy(() => import("pages/Home"));
+
 const RootRoute = () => {
   return (
     <>
