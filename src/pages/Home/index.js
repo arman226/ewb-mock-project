@@ -5,12 +5,20 @@ import Requirements from "./Requirements";
 
 const Home = () => {
   return (
-    <div>
-      <Products />
-      <br />
-      <NAVPU />
-      <br />
-      <Requirements />
+    <div className="container">
+      <div className="row mt-5">
+        <div className="col-md-6 pt-5 text-center">
+          <Products />
+        </div>
+        <div className="col-md-6 pt-5 text-center">
+          <NAVPU />
+        </div>
+      </div>
+      <div className="row mt-5">
+        <div className="col-md-12 pt-5 text-center">
+          <Requirements />
+        </div>
+      </div>
     </div>
   );
 };
