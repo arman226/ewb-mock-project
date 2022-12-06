@@ -24,6 +24,10 @@ const menu = [
     title: "Notifications",
     component: "",
   },
+  {
+    title: "Settings",
+    component: "",
+  },  
 ];
 
 const NavMenu = withStyles(styles)(({ classes, branding }) => {
