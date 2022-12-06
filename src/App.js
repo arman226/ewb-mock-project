@@ -1,6 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 import Home from "./pages/Home";
+import Notification from "./pages/Notification";
 import { MuiThemeProvider } from "@material-ui/core";
 import theme from "theme";
 import Routes from "routes";
@@ -12,6 +13,7 @@ function App() {
       {/* <div className="App">
         <Home />
       </div> */}
+      <Notification />
     </MuiThemeProvider>
   );
 }
