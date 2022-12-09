@@ -26,17 +26,24 @@ export default (theme) => ({
   secondaryColorText: {
     color: theme.palette.secondary.main,
   },
-  homeSectionTitle: {
-    fontSize: 50,
-    fontFamily: "PROSTY",
-  },
-  homeSectionTitleContainer: {
-    borderBottom: "red",
+  appBar: {
+    borderBottom: 1,
+    borderBottomWidth: 1.5,
     borderBottomStyle: "solid",
+    borderBottomColor: theme.palette.primary.main,
+    borderTop: 1.5,
+    borderTopWidth: 1.5,
+    borderTopStyle: "solid",
+    borderTopColor: theme.palette.dark.main,
+    backgroundColor: theme.palette.light.main,
   },
   webPageDefaultLayout: {
     paddingLeft: theme.dimensions.paddingHorizontal,
     paddingRight: theme.dimensions.paddingHorizontal,
   },
-  footerSpacer: { textAlign: "center", paddingTop: 20, paddingBottom: 20 },
+  footerSpacer: {
+    textAlign: "center",
+    paddingTop: 20,
+    paddingBottom: 20,
+  },
 });

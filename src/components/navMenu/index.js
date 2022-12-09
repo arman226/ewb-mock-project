@@ -4,8 +4,12 @@ import { withStyles } from "@material-ui/core/styles";
 import { AppBar } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import styles from "styles";
-import { BLACK, GRAY, WHITE } from "values/colors.styles";
 import Item from "./Item";
+import {
+  MARKETPLACE_PATH,
+  NOTIFICATIONS_PATH,
+  PROFILE_PATH,
+} from "routes/constants";
 
 const menu = [
   {
@@ -14,20 +18,20 @@ const menu = [
   },
   {
     title: "Profile",
-    component: "",
+    component: PROFILE_PATH,
   },
   {
     title: "Marketplace",
-    component: "",
+    component: MARKETPLACE_PATH,
   },
   {
     title: "Notifications",
-    component: "",
+    component: NOTIFICATIONS_PATH,
   },
   {
     title: "Settings",
-    component: "",
-  },  
+    component: "/settings",
+  },
 ];
 
 const NavMenu = withStyles(styles)(({ classes, branding }) => {
@@ -37,21 +41,7 @@ const NavMenu = withStyles(styles)(({ classes, branding }) => {
 
   return (
     <div>
-      <AppBar
-        position="fixed"
-        elevation={0}
-        style={{
-          borderBottom: 1,
-          borderBottomWidth: 1.5,
-          borderBottomStyle: "solid",
-          borderBottomColor: GRAY,
-          borderTop: 1.5,
-          borderTopWidth: 1.5,
-          borderTopStyle: "solid",
-          borderTopColor: BLACK,
-          backgroundColor: WHITE,
-        }}
-      >
+      <AppBar position="fixed" elevation={0} className={classes.appBar}>
         <Navbar
           style={{
             paddingLeft: 40,
@@ -72,13 +62,7 @@ const NavMenu = withStyles(styles)(({ classes, branding }) => {
           >
             <ul className="navbar-nav flex-grow">
               {menu.map(({ title, component }, idx) => (
-                <Item
-                  title={title}
-                  component={component}
-                  onClickListener={() => {
-                    window.location.hash = component;
-                  }}
-                />
+                <Item title={title} component={component} />
               ))}
             </ul>
           </Collapse>
