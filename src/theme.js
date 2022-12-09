@@ -1,7 +1,12 @@
 import { createMuiTheme } from "@material-ui/core/styles";
 import createPalette from "@material-ui/core/styles/createPalette";
 import createTypography from "@material-ui/core/styles/createTypography";
-import { BLACK, PRIMARY_ORANGE, WHITE } from "values/colors.styles";
+import {
+  BLACK,
+  PRIMARY_GRAY,
+  PRIMARY_ORANGE,
+  WHITE,
+} from "values/colors.styles";
 import { PAGE_MARGIN_TOP, PAGE_PADDING_HORIZONTAL } from "values/dimens.styles";
 
 export default createMuiTheme({
@@ -11,7 +16,7 @@ export default createMuiTheme({
   palette: {
     primary: {
       // light: '#ffffa6',
-      main: WHITE,
+      main: PRIMARY_GRAY,
       // dark: '#a8b545',
       contrastText: WHITE,
     },

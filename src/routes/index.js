@@ -1,20 +1,29 @@
-import React, { lazy } from "react";
+import React from "react";
 import { Route, Routes } from "react-router";
-import NavMenu from "components/navMenu";
 import { BrowserRouter as Router, Navigate } from "react-router-dom";
-const Home = lazy(() => import("pages/Home"));
+import NavMenu from "components/navMenu";
+import Layout from "components/Layout";
+import Home from "pages/Home";
+import Settings from "pages/Settings";
+import Notification from "pages/Notification";
+import Profile from "pages/Profile";
+import { NOTIFICATIONS_PATH, PROFILE_PATH } from "./constants";
 
 const RootRoute = () => {
   return (
     <>
       <Router>
         <NavMenu />
-
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="*" element={<Navigate to="/" />} />
-        </Routes>
+        <Layout>
+          <Routes>
+            <Route exact path="/" element={<Home />} />
+            <Route path="/home" element={<Home />} />
+            <Route path={NOTIFICATIONS_PATH} element={<Notification />} />
+            <Route path={PROFILE_PATH} element={<Profile />} />
+            <Route path="/settings" element={<Settings />} />
+            <Route path="*" element={<Navigate to="/" />} />
+          </Routes>
+        </Layout>
       </Router>
     </>
   );

@@ -10,15 +10,13 @@ import {
 import { WHITE } from "values/colors.styles";
 
 const Item = ({ title, component, onClickListener }) => {
-  const itemRef = useRef();
-
   const classes = useStyles();
   return (
     <NavItem onClick={onClickListener}>
       <NavLink
         tag={Link}
         className={["text-dark", classes.title]}
-        to={{ pathname: onClickListener != null ? "/home" : component }}
+        to={{ pathname: component }}
       >
         {title}
       </NavLink>
