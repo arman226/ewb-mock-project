@@ -1,25 +1,14 @@
-import React, { useEffect } from "react";
-import NAVPU from "./NAVPU";
-import Products from "./Products";
-import Requirements from "./Requirements";
+import React, { lazy, useEffect } from "react";
+import { Container } from "reactstrap";
+
+
+const LoanProducts = lazy(() => import('./Products'));
+const NAVPU = lazy(() => import('./NAVPU'));
+const Requirements = lazy(() => import('./Requirements'));
 
 const Home = () => {
   return (
-    <div className="container">
-      <div className="row mt-5">
-        <div className="col-md-6 pt-5 text-center">
-          <Products />
-        </div>
-        <div className="col-md-6 pt-5 text-center">
-          <NAVPU />
-        </div>
-      </div>
-      <div className="row mt-5">
-        <div className="col-md-12 pt-5 text-center">
-          <Requirements />
-        </div>
-      </div>
-    </div>
+    <LoanProducts/>
   );
 };
 
