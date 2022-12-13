@@ -4,7 +4,7 @@ import styles from "styles";
 
 const Layout = ({ children, classes }) => {
   return (
-    <div style={{ paddingTop: 100 }} className={classes.primaryBackgroundColor}>
+    <div style={{ paddingTop: 100, paddingBottom: 50 }} className={classes.primaryBackgroundColor}>
       {children}
     </div>
   );
