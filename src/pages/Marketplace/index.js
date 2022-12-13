@@ -5,6 +5,7 @@ const Filter = lazy(() => import("./Filter" ));
 const Search = lazy(() => import("./Search" ));
 
 const Marketplace = () => {
+<<<<<<< HEAD
    return (
     <Suspense fallback="<>loading...<>">
       <div className="container">
@@ -15,6 +16,12 @@ const Marketplace = () => {
         <ProductListing />
       </div>
     </Suspense>
+=======
+  return (
+    <div>
+      <ProductListing />
+    </div>
+>>>>>>> b7d65dde4fb37bcc01cbfbf95890953b549c774b
   );
 };
 
