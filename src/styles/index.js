@@ -46,4 +46,8 @@ export default (theme) => ({
     paddingTop: 20,
     paddingBottom: 20,
   },
+  productBox:{
+    Border: 1,
+    borderTopStyle: "solid",
+  }
 });
