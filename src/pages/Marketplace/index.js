@@ -1,4 +1,4 @@
-import React from 'react';
+import React , { lazy } from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -7,6 +7,8 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import { Container } from "reactstrap";
+
+const LoadCreditCards = lazy(() => import('./creditCard'));
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -89,13 +91,13 @@ const Marketplace = () => {
         </Tabs>
       </AppBar>
       <TabPanel value={value} index={0} className={classes.tabpanel}>
-        <p className={classes.productIntro}>Let us help you find the best credit card that fits your lifestyle.</p>
+        <LoadCreditCards></LoadCreditCards>
       </TabPanel>
       <TabPanel value={value} index={1} className={classes.tabpanel}>
-      <p className={classes.productIntro}>Enjoy the convenience of accessing your funds at ATMs, and cashless shopping, dining or online purchases, anytime, anywhere.</p>
+        <p className={classes.productIntro}>Enjoy the convenience of accessing your funds at ATMs, and cashless shopping, dining or online purchases, anytime, anywhere.</p>
       </TabPanel>
       <TabPanel value={value} index={2} className={classes.tabpanel}>
-      <p className={classes.productIntro}>Manage expenses better with an effective budgeting tool that allows you to spend up to the amount loaded in the card.</p>
+        <p className={classes.productIntro}>Manage expenses better with an effective budgeting tool that allows you to spend up to the amount loaded in the card.</p>
       </TabPanel>
     </Container>
   );
