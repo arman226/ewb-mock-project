@@ -28,17 +28,22 @@ const useStyles = makeStyles((theme) => ({
     avatar: {
       backgroundColor: red[500],
     },
+    root:{
+      margin: 10,
+      minHeight: 200
+    }
   }));
   
 
-const CreditCard = () => {
+const CreditCard = () => { 
     const classes = useStyles();
 
     return (
       <Container>
         <Box color="text.primary" className={classes.productIntro}>
-          <p >Let us help you find the best credit card that fits your lifestyle.</p>   
-
+        <Typography variant="body2"  component="p">
+          Let us help you find the best credit card that fits your lifestyle.
+        </Typography>
           <Grid container justifyContent="center" alignItems="center" style={{marginBottom: 'px'}}>
               <Grid item lg={4}>
                   <Card  justifyContent="center" alignItems="center" className={classes.root}>
