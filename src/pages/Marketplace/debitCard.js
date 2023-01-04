@@ -35,14 +35,14 @@ const useStyles = makeStyles((theme) => ({
   }));
   
 
-const CreditCard = () => { 
+const DebitCard = () => { 
     const classes = useStyles();
 
     return (
       <Container>
         <Box color="text.primary" className={classes.productIntro}>
         <Typography variant="body2"  component="p">
-          Let us help you find the best credit card that fits your lifestyle.
+          Enjoy the convenience of accessing your funds at ATMs, and cashless shopping, dining or online purchases this Christmas season.
         </Typography>
           <Grid container justifyContent="center" alignItems="center" style={{marginBottom: 'px'}}>
               <Grid item lg={4}>
@@ -53,11 +53,11 @@ const CreditCard = () => {
                           <CreditCardIcon />
                         </Avatar>
                       }
-                      title="There is a card that’s right for you"
+                      title="Access Your Funds Anywhere In The World"
                     />
                     <CardContent>
                       <Typography variant="body2" color="textSecondary" component="p">
-                        Whether you’re a practical spender, an avid shopper, a savvy traveler, or a rewards seeker, there’s an EastWest credit card that will best suit your lifestyle.
+                        Withdraw cash from over 1.9 million ATMs worldwide.​
                       </Typography>
                     </CardContent>
                   </Card>
@@ -70,11 +70,11 @@ const CreditCard = () => {
                           <CardGiftcardIcon />
                         </Avatar>
                       }
-                      title="Exclusive Perks"
+                      title="Experience Cashless Purchases"
                     />
                     <CardContent>
                       <Typography variant="body2" color="textSecondary" component="p">
-                      Delight in special offers and privileges from partner merchants so you can get the most from what you pay for.
+                      Use your card in over 61 million Visa-affiliated establishments and online merchants here and abroad.
                       </Typography>
                     </CardContent>
                   </Card>    
@@ -87,11 +87,11 @@ const CreditCard = () => {
                           <ShoppingCartIcon />
                         </Avatar>
                       }
-                      title="Installment Facilities"
+                      title= "Be Protected With Best-In-Class Security"
                     />
                     <CardContent>
                       <Typography variant="body2" color="textSecondary" component="p">
-                      Gain financial flexibility with 0% installment offers at partner merchants, low interest rates for balance transfers, or with affordable terms when you convert your big-ticket retail purchases to installment.
+                      Conveniently control your ATM withdrawals, point-of-sale and online purchases with the card control facility in EastWest Online and Mobile.
                       </Typography>
                     </CardContent>
                   </Card>
@@ -102,4 +102,4 @@ const CreditCard = () => {
     ) 
 }
 
-export default CreditCard;
+export default DebitCard;

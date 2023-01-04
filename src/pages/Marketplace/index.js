@@ -9,6 +9,7 @@ import Box from '@material-ui/core/Box';
 import { Container } from "reactstrap";
 
 const LoadCreditCards = lazy(() => import('./creditCard'));
+const LoadDebitCards = lazy(() => import('./debitCard'));
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -94,7 +95,7 @@ const Marketplace = () => {
         <LoadCreditCards></LoadCreditCards>
       </TabPanel>
       <TabPanel value={value} index={1} className={classes.tabpanel}>
-        <p className={classes.productIntro}>Enjoy the convenience of accessing your funds at ATMs, and cashless shopping, dining or online purchases, anytime, anywhere.</p>
+        <LoadDebitCards></LoadDebitCards>
       </TabPanel>
       <TabPanel value={value} index={2} className={classes.tabpanel}>
         <p className={classes.productIntro}>Manage expenses better with an effective budgeting tool that allows you to spend up to the amount loaded in the card.</p>
